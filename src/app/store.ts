@@ -1,9 +1,10 @@
 import {combineReducers} from "redux";
 import {configureStore} from "@reduxjs/toolkit";
+import {figuresReducer} from "../redusers/figure-reducer";
 
 
-const rootReducer =combineReducers({
-
+const rootReducer = combineReducers({
+    figures: figuresReducer
 })
 
 export const store = configureStore({
@@ -13,3 +14,6 @@ export const store = configureStore({
 
 export type AppRootStateType = ReturnType<typeof rootReducer>
 export type RootState = ReturnType<typeof store.getState>
+
+// @ts-ignore
+window.store = store;

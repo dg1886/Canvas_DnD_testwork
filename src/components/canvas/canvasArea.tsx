@@ -1,14 +1,15 @@
 import React from 'react'
-import s from './canvasArea.module.css'
+import style from './canvasArea.module.css'
+import Canvas from "./canvas/canvas";
 
 function CanvasArea() {
 
     return (
-        <div className={s.canvasArea}>
-            <div className={s.canvasHeader}>
+        <div className={style.canvasArea}>
+            <div className={style.canvasHeader}>
                 <h2>Canvas</h2>
             </div>
-
+            <Canvas/>
         </div>
     )
 }
